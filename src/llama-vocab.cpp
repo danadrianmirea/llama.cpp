@@ -2092,7 +2092,8 @@ void llama_vocab::impl::load(llama_model_loader & ml, const LLM_KV & kv) {
                 pre_type = LLAMA_VOCAB_PRE_TYPE_SOLAR_OPEN;
                 clean_spaces = false;
             } else {
-                throw std::runtime_error(format("unknown pre-tokenizer type: '%s'", tokenizer_pre.c_str()));
+                //throw std::runtime_error(format("unknown pre-tokenizer type: '%s'", tokenizer_pre.c_str()));
+                tokenizer_pre == "llama3";
             }
         } else if (type == LLAMA_VOCAB_TYPE_SPM) {
             pre_type = LLAMA_VOCAB_PRE_TYPE_DEFAULT;
